@@ -64,3 +64,22 @@ Example:
 ```
 
 The executable is `e-app.exe`.
+
+## Re-using the same build for different URLs (Experimental)
+
+```bash
+cp config.json.template config.json
+npm run make
+```
+
+```bash
+MI_TARGET_URL="https://www.google.com"
+TEMPLATE_BUILD="out/e-app-win32-x64"
+FINAL_BUILD="out/e-app-win32-x64-final"
+cp -r $TEMPLATE_BUILD $FINAL_BUILD
+cd $FINAL_BUILD/locale
+npx asar app.asar app-asar
+cp app.asar app.asar.bkp
+sed -i "s|<MI_TARGET_URL>|$MI_TARGET_URL|g" app-asar/config.js
+npx asar pack app-asar app.asar
+```
