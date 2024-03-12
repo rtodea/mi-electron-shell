@@ -10,7 +10,8 @@ function createWindow () {
             contextIsolation: true, // protect against prototype pollution
             enableRemoteModule: false // turn off remote
         },
-        autoHideMenuBar: true
+        autoHideMenuBar: true,
+        fullscreen: true
     });
 
     win.loadURL(config.url).then(() => {
