@@ -13,7 +13,7 @@ function createWindow () {
         autoHideMenuBar: true
     });
 
-    win.loadURL(config.micrositeUrl).then(() => {
+    win.loadURL(config.url).then(() => {
         console.log("Microsite loaded successfully");
     })
 }
