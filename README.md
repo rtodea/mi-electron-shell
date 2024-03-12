@@ -32,8 +32,35 @@ npm ci
 npm run package
 ```
 
-### Create .exe Installable
-
-```bash
-npm run make
+The package will be created in the `out` folder:
+Example:
 ```
+.
+└── e-app-win32-x64
+    ├── chrome_100_percent.pak
+    ├── chrome_200_percent.pak
+    ├── d3dcompiler_47.dll
+    ├── e-app.exe
+    ├── ffmpeg.dll
+    ├── icudtl.dat
+    ├── libEGL.dll
+    ├── libGLESv2.dll
+    ├── LICENSE
+    ├── LICENSES.chromium.html
+    ├── locales
+    │   ├── af.pak
+    │   ...
+    │   └── zh-TW.pak
+    ├── resources
+    │   └── app.asar
+    ├── resources.pak
+    ├── snapshot_blob.bin
+    ├── Squirrel.exe
+    ├── v8_context_snapshot.bin
+    ├── version
+    ├── vk_swiftshader.dll
+    ├── vk_swiftshader_icd.json
+    └── vulkan-1.dll
+```
+
+The executable is `e-app.exe`.
