@@ -18,6 +18,14 @@ First, you need to have Node.js and NPM installed. You can download it from [her
 npm ci
 ```
 
+### Create `config.json` with the correct URL
+
+```json
+{
+    "url": "https://www.google.com"
+}
+```
+
 ### Create Distributable Package
 
 ```bash
