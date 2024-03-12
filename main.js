@@ -1,4 +1,5 @@
 const {app, BrowserWindow} = require('electron')
+const config = require("./config.json");
 
 function createWindow () {
     let win = new BrowserWindow({
@@ -8,10 +9,13 @@ function createWindow () {
             nodeIntegration: false, // is default value after Electron v5
             contextIsolation: true, // protect against prototype pollution
             enableRemoteModule: false // turn off remote
-        }
-    })
+        },
+        autoHideMenuBar: true
+    });
 
-    win.loadURL('https://dev-viba-testing.mobileinsight.com/?webLinkId=WL-8cd1cfe1-033d-4903-a2f0-3a4954cd60fe')
+    win.loadURL(config.micrositeUrl).then(() => {
+        console.log("Microsite loaded successfully");
+    })
 }
 
 app.whenReady().then(createWindow)
