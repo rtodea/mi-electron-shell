@@ -8,3 +8,5 @@ config*json
 out-*.zip
 *.zip
 *.7z
+configs/
+bot-*
